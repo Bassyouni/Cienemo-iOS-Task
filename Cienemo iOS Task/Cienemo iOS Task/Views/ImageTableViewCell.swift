@@ -13,6 +13,11 @@ class ImageTableViewCell: UITableViewCell {
     // MARK: - UI Variables
     private let documentImageView = UIImageView()
     
+    // MARK: - variables
+    var dataModel: CellDataModel! {
+        didSet { bindUI() }
+    }
+    
     // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,10 +44,10 @@ class ImageTableViewCell: UITableViewCell {
         documentImageView.heightAnchor.constraint(equalToConstant: 120).isActive = true
     }
     
-    // MARK: - Public
-    func configureCell(_ imageUrl: URL) {
+    // MARK: - Actions
+    private func bindUI() {
         do {
-            let data = try Data(contentsOf: imageUrl)
+            let data = try Data(contentsOf: dataModel.documentUrl)
             documentImageView.image = UIImage(data: data)
         } catch {
              print(error)

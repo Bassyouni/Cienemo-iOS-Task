@@ -14,6 +14,7 @@
 		8CC39CB52439D4FF00764F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */; };
 		8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */; };
 		8CC39CD1243A49FE00764F8A /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */; };
+		8CC39CD4243A6E1100764F8A /* CellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CD3243A6E1100764F8A /* CellDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8CC39CB62439D4FF00764F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryMonitor.swift; sourceTree = "<group>"; };
 		8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		8CC39CD3243A6E1100764F8A /* CellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				8CC39CAC2439D4FE00764F8A /* ViewController.swift */,
 				8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */,
+				8CC39CD3243A6E1100764F8A /* CellDataModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				8CC39CD1243A49FE00764F8A /* ImageTableViewCell.swift in Sources */,
 				8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */,
 				8CC39CAB2439D4FE00764F8A /* SceneDelegate.swift in Sources */,
+				8CC39CD4243A6E1100764F8A /* CellDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

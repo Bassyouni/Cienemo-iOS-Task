@@ -15,7 +15,7 @@ class ViewController: UIViewController  {
     
     // MARK: - Variables
     private var dirMonitor: DirectoryMonitor!
-    private var imagesUrlsDataSource = [URL]()
+    private var imagesUrlsDataSource = [CellDataModel]()
     private let cellIdentifier = "cellIdentifier"
     
     // MARK: - Lifecycle
@@ -58,12 +58,37 @@ class ViewController: UIViewController  {
 // MARK: - DirectoryMonitorDelegate
 extension ViewController: DirectoryMonitorDelegate {
     func didChange(directoryMonitor: DirectoryMonitor, added: Set<URL>, removed: Set<URL>) {
-        print(added)
-        print("-----------------------------------")
-        print(removed)
-        let indexPaths = added.enumerated().map { IndexPath(row: imagesUrlsDataSource.count + $0.offset, section: 0) }
-        imagesUrlsDataSource.append(contentsOf: added)
-        tableView.insertRows(at: indexPaths, with: .automatic)
+        handleRemovedDocuments(removed)
+        handleAddedDocuments(added)
+    }
+    
+    private func handleAddedDocuments(_ newDocuments: Set<URL>) {
+        let addedModelsIndexPaths = newDocuments
+            .enumerated()
+            .map { IndexPath(row: imagesUrlsDataSource.count + $0.offset, section: 0) }
+        
+        let models = newDocuments.map { CellDataModel(documentUrl: $0) }
+        
+        imagesUrlsDataSource.append(contentsOf: models)
+        if !addedModelsIndexPaths.isEmpty {
+            DispatchQueue.main.async {
+                self.tableView.insertRows(at: addedModelsIndexPaths, with: .automatic)
+            }
+        }
+    }
+    
+    private func handleRemovedDocuments(_ removedDocuments: Set<URL>) {
+        let removedModelsIndexPaths = imagesUrlsDataSource
+            .enumerated()
+            .compactMap { removedDocuments.contains($0.element.documentUrl) ? $0.offset : nil }
+            .map {IndexPath(row: $0, section: 0) }
+        
+        removedModelsIndexPaths.forEach { imagesUrlsDataSource.remove(at: $0.row) }
+        if !removedModelsIndexPaths.isEmpty {
+            DispatchQueue.main.async {
+                self.tableView.deleteRows(at: removedModelsIndexPaths, with: .automatic)
+            }
+        }
     }
 }
 
@@ -75,7 +100,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImageTableViewCell.self), for: indexPath) as? ImageTableViewCell {
-            cell.configureCell(imagesUrlsDataSource[indexPath.row])
+            cell.dataModel = imagesUrlsDataSource[indexPath.row]
             return cell
         }
         return UITableViewCell()
