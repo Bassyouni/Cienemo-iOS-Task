@@ -11,7 +11,7 @@ import UIKit
 class ImageTableViewCell: UITableViewCell {
     
     // MARK: - UI Variables
-    private let documentImageView = UIImageView()
+    private let documentImageView = AsyncImageView()
     
     // MARK: - variables
     var dataModel: CellDataModel! {
@@ -46,12 +46,6 @@ class ImageTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     private func bindUI() {
-        do {
-            let data = try Data(contentsOf: dataModel.documentUrl)
-            documentImageView.image = UIImage(data: data)
-        } catch {
-             print(error)
-        }
+        documentImageView.loadImageUsingUrlString(url: dataModel.documentUrl)
     }
-
 }

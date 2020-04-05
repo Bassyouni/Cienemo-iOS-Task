@@ -16,7 +16,6 @@ class ViewController: UIViewController  {
     // MARK: - Variables
     private var dirMonitor: DirectoryMonitor!
     private var imagesUrlsDataSource = [CellDataModel]()
-    private let cellIdentifier = "cellIdentifier"
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -95,12 +94,12 @@ extension ViewController: DirectoryMonitorDelegate {
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imagesUrlsDataSource.count
+        return imagesUrlsDataSource.count 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImageTableViewCell.self), for: indexPath) as? ImageTableViewCell {
-            cell.dataModel = imagesUrlsDataSource[indexPath.row]
+            cell.dataModel = imagesUrlsDataSource[indexPath.row % imagesUrlsDataSource.count]
             return cell
         }
         return UITableViewCell()
