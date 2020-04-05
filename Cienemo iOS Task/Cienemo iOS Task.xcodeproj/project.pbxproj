@@ -10,45 +10,24 @@
 		8CC39CA92439D4FE00764F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CA82439D4FE00764F8A /* AppDelegate.swift */; };
 		8CC39CAB2439D4FE00764F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CAA2439D4FE00764F8A /* SceneDelegate.swift */; };
 		8CC39CAD2439D4FE00764F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CAC2439D4FE00764F8A /* ViewController.swift */; };
-		8CC39CB02439D4FE00764F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CAE2439D4FE00764F8A /* Main.storyboard */; };
 		8CC39CB22439D4FF00764F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CB12439D4FF00764F8A /* Assets.xcassets */; };
 		8CC39CB52439D4FF00764F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */; };
-		8CC39CC02439D4FF00764F8A /* Cienemo_iOS_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CBF2439D4FF00764F8A /* Cienemo_iOS_TaskTests.swift */; };
+		8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8CC39CBC2439D4FF00764F8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CC39C9D2439D4FE00764F8A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8CC39CA42439D4FE00764F8A;
-			remoteInfo = "Cienemo iOS Task";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8CC39CA52439D4FE00764F8A /* Cienemo iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cienemo iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC39CA82439D4FE00764F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC39CAA2439D4FE00764F8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8CC39CAC2439D4FE00764F8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8CC39CAF2439D4FE00764F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CC39CB12439D4FF00764F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC39CB42439D4FF00764F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CC39CB62439D4FF00764F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CC39CBB2439D4FF00764F8A /* Cienemo iOS TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cienemo iOS TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CC39CBF2439D4FF00764F8A /* Cienemo_iOS_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cienemo_iOS_TaskTests.swift; sourceTree = "<group>"; };
-		8CC39CC12439D4FF00764F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8CC39CA22439D4FE00764F8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8CC39CB82439D4FF00764F8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				8CC39CA72439D4FE00764F8A /* Cienemo iOS Task */,
-				8CC39CBE2439D4FF00764F8A /* Cienemo iOS TaskTests */,
 				8CC39CA62439D4FE00764F8A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				8CC39CA52439D4FE00764F8A /* Cienemo iOS Task.app */,
-				8CC39CBB2439D4FF00764F8A /* Cienemo iOS TaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,24 +56,39 @@
 		8CC39CA72439D4FE00764F8A /* Cienemo iOS Task */ = {
 			isa = PBXGroup;
 			children = (
-				8CC39CA82439D4FE00764F8A /* AppDelegate.swift */,
-				8CC39CAA2439D4FE00764F8A /* SceneDelegate.swift */,
+				8CC39CCE2439E69600764F8A /* Launch Delegates */,
+				8CC39CCD2439E68E00764F8A /* Resources */,
+				8CC39CCA2439E65700764F8A /* DirectoryMonitor */,
 				8CC39CAC2439D4FE00764F8A /* ViewController.swift */,
-				8CC39CAE2439D4FE00764F8A /* Main.storyboard */,
-				8CC39CB12439D4FF00764F8A /* Assets.xcassets */,
-				8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */,
-				8CC39CB62439D4FF00764F8A /* Info.plist */,
 			);
 			path = "Cienemo iOS Task";
 			sourceTree = "<group>";
 		};
-		8CC39CBE2439D4FF00764F8A /* Cienemo iOS TaskTests */ = {
+		8CC39CCA2439E65700764F8A /* DirectoryMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				8CC39CBF2439D4FF00764F8A /* Cienemo_iOS_TaskTests.swift */,
-				8CC39CC12439D4FF00764F8A /* Info.plist */,
+				8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */,
 			);
-			path = "Cienemo iOS TaskTests";
+			path = DirectoryMonitor;
+			sourceTree = "<group>";
+		};
+		8CC39CCD2439E68E00764F8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CC39CB12439D4FF00764F8A /* Assets.xcassets */,
+				8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */,
+				8CC39CB62439D4FF00764F8A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CC39CCE2439E69600764F8A /* Launch Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8CC39CA82439D4FE00764F8A /* AppDelegate.swift */,
+				8CC39CAA2439D4FE00764F8A /* SceneDelegate.swift */,
+			);
+			path = "Launch Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,24 +111,6 @@
 			productReference = 8CC39CA52439D4FE00764F8A /* Cienemo iOS Task.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8CC39CBA2439D4FF00764F8A /* Cienemo iOS TaskTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8CC39CC72439D4FF00764F8A /* Build configuration list for PBXNativeTarget "Cienemo iOS TaskTests" */;
-			buildPhases = (
-				8CC39CB72439D4FF00764F8A /* Sources */,
-				8CC39CB82439D4FF00764F8A /* Frameworks */,
-				8CC39CB92439D4FF00764F8A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8CC39CBD2439D4FF00764F8A /* PBXTargetDependency */,
-			);
-			name = "Cienemo iOS TaskTests";
-			productName = "Cienemo iOS TaskTests";
-			productReference = 8CC39CBB2439D4FF00764F8A /* Cienemo iOS TaskTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,10 +123,6 @@
 				TargetAttributes = {
 					8CC39CA42439D4FE00764F8A = {
 						CreatedOnToolsVersion = 11.4;
-					};
-					8CC39CBA2439D4FF00764F8A = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 8CC39CA42439D4FE00764F8A;
 					};
 				};
 			};
@@ -170,7 +140,6 @@
 			projectRoot = "";
 			targets = (
 				8CC39CA42439D4FE00764F8A /* Cienemo iOS Task */,
-				8CC39CBA2439D4FF00764F8A /* Cienemo iOS TaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,14 +151,6 @@
 			files = (
 				8CC39CB52439D4FF00764F8A /* LaunchScreen.storyboard in Resources */,
 				8CC39CB22439D4FF00764F8A /* Assets.xcassets in Resources */,
-				8CC39CB02439D4FE00764F8A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8CC39CB92439D4FF00764F8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,37 +163,14 @@
 			files = (
 				8CC39CAD2439D4FE00764F8A /* ViewController.swift in Sources */,
 				8CC39CA92439D4FE00764F8A /* AppDelegate.swift in Sources */,
+				8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */,
 				8CC39CAB2439D4FE00764F8A /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8CC39CB72439D4FF00764F8A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CC39CC02439D4FF00764F8A /* Cienemo_iOS_TaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8CC39CBD2439D4FF00764F8A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8CC39CA42439D4FE00764F8A /* Cienemo iOS Task */;
-			targetProxy = 8CC39CBC2439D4FF00764F8A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		8CC39CAE2439D4FE00764F8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CC39CAF2439D4FE00764F8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9APBUX8U9;
-				INFOPLIST_FILE = "Cienemo iOS Task/Info.plist";
+				INFOPLIST_FILE = "Cienemo iOS Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bassyouni.Cienemo-iOS-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9APBUX8U9;
-				INFOPLIST_FILE = "Cienemo iOS Task/Info.plist";
+				INFOPLIST_FILE = "Cienemo iOS Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,51 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bassyouni.Cienemo-iOS-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		8CC39CC82439D4FF00764F8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9APBUX8U9;
-				INFOPLIST_FILE = "Cienemo iOS TaskTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bassyouni.Cienemo-iOS-TaskTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cienemo iOS Task.app/Cienemo iOS Task";
-			};
-			name = Debug;
-		};
-		8CC39CC92439D4FF00764F8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9APBUX8U9;
-				INFOPLIST_FILE = "Cienemo iOS TaskTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bassyouni.Cienemo-iOS-TaskTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cienemo iOS Task.app/Cienemo iOS Task";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -455,15 +349,6 @@
 			buildConfigurations = (
 				8CC39CC52439D4FF00764F8A /* Debug */,
 				8CC39CC62439D4FF00764F8A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8CC39CC72439D4FF00764F8A /* Build configuration list for PBXNativeTarget "Cienemo iOS TaskTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8CC39CC82439D4FF00764F8A /* Debug */,
-				8CC39CC92439D4FF00764F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

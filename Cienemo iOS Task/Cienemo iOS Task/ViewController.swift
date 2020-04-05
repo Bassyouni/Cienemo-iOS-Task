@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController  {
+    
+    var dirMonitor: DirectoryMonitor!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .brown
+        startMonitoringDocumentsDirectory()
     }
 
+    private func startMonitoringDocumentsDirectory() {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = paths[0]
+        print(documentDirectory.absoluteString)
+        
+        dirMonitor = DirectoryMonitor(directory: documentDirectory, matching: "public.tiff", requestedResourceKeys: [.nameKey, .pathKey])
+        dirMonitor.delegate = self
+        try? dirMonitor.start()
+    }
+}
 
+extension ViewController: DirectoryMonitorDelegate {
+    func didChange(directoryMonitor: DirectoryMonitor, added: Set<URL>, removed: Set<URL>) {
+        print(added)
+        print("-----------------------------------")
+        print(removed)
+    }
 }
 
