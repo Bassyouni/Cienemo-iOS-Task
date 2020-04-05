@@ -27,6 +27,8 @@ class ViewController: UIViewController  {
     
     // MARK: - Initialization
     private func setupUI() {
+        overrideUserInterfaceStyle = .dark
+        navigationController?.overrideUserInterfaceStyle = .dark
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Documents Images"
         view.addSubview(tableView)
