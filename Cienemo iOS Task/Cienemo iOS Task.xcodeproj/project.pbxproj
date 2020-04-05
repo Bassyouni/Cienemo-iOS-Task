@@ -13,6 +13,7 @@
 		8CC39CB22439D4FF00764F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CB12439D4FF00764F8A /* Assets.xcassets */; };
 		8CC39CB52439D4FF00764F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC39CB32439D4FF00764F8A /* LaunchScreen.storyboard */; };
 		8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */; };
+		8CC39CD1243A49FE00764F8A /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8CC39CB42439D4FF00764F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CC39CB62439D4FF00764F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CC39CCB2439E67200764F8A /* DirectoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryMonitor.swift; sourceTree = "<group>"; };
+		8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,7 @@
 				8CC39CCE2439E69600764F8A /* Launch Delegates */,
 				8CC39CCD2439E68E00764F8A /* Resources */,
 				8CC39CCA2439E65700764F8A /* DirectoryMonitor */,
-				8CC39CAC2439D4FE00764F8A /* ViewController.swift */,
+				8CC39CCF243A49DD00764F8A /* Views */,
 			);
 			path = "Cienemo iOS Task";
 			sourceTree = "<group>";
@@ -89,6 +91,15 @@
 				8CC39CAA2439D4FE00764F8A /* SceneDelegate.swift */,
 			);
 			path = "Launch Delegates";
+			sourceTree = "<group>";
+		};
+		8CC39CCF243A49DD00764F8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CC39CAC2439D4FE00764F8A /* ViewController.swift */,
+				8CC39CD0243A49FE00764F8A /* ImageTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			files = (
 				8CC39CAD2439D4FE00764F8A /* ViewController.swift in Sources */,
 				8CC39CA92439D4FE00764F8A /* AppDelegate.swift in Sources */,
+				8CC39CD1243A49FE00764F8A /* ImageTableViewCell.swift in Sources */,
 				8CC39CCC2439E67200764F8A /* DirectoryMonitor.swift in Sources */,
 				8CC39CAB2439D4FE00764F8A /* SceneDelegate.swift in Sources */,
 			);
