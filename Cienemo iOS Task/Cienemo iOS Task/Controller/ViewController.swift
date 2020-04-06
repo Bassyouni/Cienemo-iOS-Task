@@ -84,7 +84,10 @@ extension ViewController: DirectoryMonitorDelegate {
             .compactMap { removedDocuments.contains($0.element.documentUrl) ? $0.offset : nil }
             .map {IndexPath(row: $0, section: 0) }
         
-        removedModelsIndexPaths.forEach { imagesUrlsDataSource.remove(at: $0.row) }
+        removedModelsIndexPaths
+            .sorted(by: { $1 < $0 })
+            .forEach {imagesUrlsDataSource.remove(at: $0.row) }
+        
         if !removedModelsIndexPaths.isEmpty {
             DispatchQueue.main.async {
                 self.tableView.deleteRows(at: removedModelsIndexPaths, with: .automatic)
