@@ -46,6 +46,6 @@ class ImageTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     private func bindUI() {
-        documentImageView.loadImageUsingUrlString(url: dataModel.documentUrl)
+        documentImageView.loadImageUsingUrlString(url: dataModel.documentUrl, size: CGSize(width: 120, height: 120))
     }
 }
